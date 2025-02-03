@@ -4,15 +4,21 @@ This repository demonstrates integration with Codecov.
 
 ## Setup Instructions
 
-1. **Add a Codecov Token:**
+1. **Fork the Repository**
+    - Click the **"Fork"** button at the top right of this repository on GitHub.
+    - This will create a copy of the repository under your own GitHub account.
+
+2. **Clone your forked repository:**
+```bash
+git clone https://github.com/your-username/codecov-demo-repo.git
+cd codecov-demo-repo
+```
+
+3. **Add a Codecov Token:**
    - In your GitHub repository, navigate to **Settings** > **Secrets and variables** > **Actions**.
    - Click **New repository secret** and add your Codecov token with the name `CODECOV_TOKEN`.
 
-2. **Clone the Repository:**
-   - Clone this repository to your local machine.
-   - cd codecov-demo-repo
-
-3. **Install Dependencies:**
+2. **Install Dependencies:**
    - Run `python3 -m venv venv`, `source venv/bin/activate`, `pip install -r requirements.txt` to install the necessary Python packages.
 
 4. **Run Tests:**
@@ -20,18 +26,3 @@ This repository demonstrates integration with Codecov.
 
 5. **Continuous Integration:**
    - The repository is set up with GitHub Actions to run tests and upload coverage reports to Codecov on each push and pull request.
-
-6. **Creating a Test Repository Based on This Template:**
-    - Create a new repository in github (e.g., codecov-test-repo)
-    ```
-    git clone --bare https://github.com/Kobby-Bawuah/codecov-demo-repo.git
-    cd codecov-demo-repo.git
-    git push --mirror https://github.com/your-username/codecov-test-repo.git
-    cd ..
-    rm -rf codecov-demo-repo.git
-    ```
-7. **Clone the new repository:**
-    ```
-    git clone https://github.com/your-username/codecov-test-repo.git
-    cd codecov-test-repo
-    ```
