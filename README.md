@@ -22,7 +22,7 @@ cd codecov-demo-repo
    - Run `python3 -m venv venv`, `source venv/bin/activate`, `pip install -r requirements.txt` to install the necessary Python packages.
 
 4. **Run Tests:**
-   - Execute `pytest --cov=src --cov-report=xml` to run tests and generate a coverage report.
+   - Execute `PYTHONPATH=$(pwd) pytest --cov=src --cov-report=xml` to run tests and generate a coverage report.
 
 5. **Continuous Integration:**
    - The repository is set up with GitHub Actions to run tests and upload coverage reports to Codecov on each push and pull request.
