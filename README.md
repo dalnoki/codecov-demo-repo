@@ -10,12 +10,28 @@ This repository demonstrates integration with Codecov.
 
 2. **Clone the Repository:**
    - Clone this repository to your local machine.
+   - cd codecov-demo-repo
 
 3. **Install Dependencies:**
-   - Run `pip install -r requirements.txt` to install the necessary Python packages.
+   - Run `python3 -m venv venv`, `source venv/bin/activate`, `pip install -r requirements.txt` to install the necessary Python packages.
 
 4. **Run Tests:**
    - Execute `pytest --cov=src --cov-report=xml` to run tests and generate a coverage report.
 
 5. **Continuous Integration:**
    - The repository is set up with GitHub Actions to run tests and upload coverage reports to Codecov on each push and pull request.
+
+6. **Creating a Test Repository Based on This Template:**
+    - Create a new repository in github (e.g., codecov-test-repo)
+    ```
+    git clone --bare https://github.com/Kobby-Bawuah/codecov-demo-repo.git
+    cd codecov-demo-repo.git
+    git push --mirror https://github.com/your-username/codecov-test-repo.git
+    cd ..
+    rm -rf codecov-demo-repo.git
+    ```
+7. **Clone the new repository:**
+    ```
+    git clone https://github.com/your-username/codecov-test-repo.git
+    cd codecov-test-repo
+    ```
